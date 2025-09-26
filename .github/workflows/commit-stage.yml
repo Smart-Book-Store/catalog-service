@@ -25,6 +25,6 @@ jobs:
           fail-build: false
           severity-cutoff: high
       - name: Build, unit tests and integration tests
-        run:
+        run: |
           chmod +x gradlew
           ./gradlew build
