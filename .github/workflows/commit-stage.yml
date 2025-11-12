@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: cuongtran1984/catalog-service
+  IMAGE_NAME: Smart-Book-Store/catalog-service
   VERSION: latest
 
 jobs:

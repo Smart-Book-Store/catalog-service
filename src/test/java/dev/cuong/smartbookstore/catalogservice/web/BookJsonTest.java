@@ -30,7 +30,8 @@ class BookJsonTest {
           "isbn": "1234567890",
           "title": "Title",
           "author": "Author",
-          "price": 9.90
+          "price": 9.90,
+          "publisher": "Polar Sophia"
         }
         """;
     var book = json.parse(content);
