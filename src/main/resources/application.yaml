@@ -5,7 +5,7 @@ spring:
     import: "optional:configserver:"
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: ${SPRING_CLOUD_CONFIG_URL:http://localhost:8888}
       request-connect-timeout: 5000
       request-read-timeout: 5000
   #      fail-fast: true
@@ -21,9 +21,11 @@ spring:
     hikari:
       connection-timeout: 2000
       maximum-pool-size: 5
-
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
 server:
   port: 9002
+  shutdown: graceful
   tomcat:
     connection-timeout: 2s
     keep-alive-timeout: 15s
