@@ -15,8 +15,8 @@ spring:
   #        max-interval: 2000
   #        multiplier: 1.1
   datasource:
-    username: user
-    password: password
+    username: ${DB_USER:}
+    password: ${DB_PASSWORD:}
     url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/storedb_catalog}
     hikari:
       connection-timeout: 2000
